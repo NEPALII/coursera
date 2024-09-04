@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;                         /*includes padding in borders as part of the total size*/
+}
+
+div {                                               /* properties to apply to the divs surrounding the sections*/
+    float: left;
+    padding: 10px;
+}
+
+h1 {                                                /*aligns the title "our menu" to the center of the page*/
+    text-align: center;
+}
+
+/*Desktop view*/
+@media (min-width: 992px){
+    .chicken, .beef, .sushi {
+        width: 33.3%;
+      }   
+}
+
+/*Tablet view*/
+@media (min-width: 768px) and (max-width: 991px){
+    .chicken, .beef {
+        width: 50%;
+      }
+    .sushi{
+        width: 100%;
+    }
+}
+
+/*Mobile view*/
+@media (max-width: 767px){
+    .chicken, .beef, .sushi {
+        width: 100%;
+      }
+
+}
+
+/*Properties that apply to all sections*/
+section {                                           /*whole section*/
+    background-color: aqua;
+    border: solid 1px black;
+    width: 100%;
+}
+
+section h3 {                                        /*general properties for heading of the section (section title)*/ 
+    border: solid 1px black;
+    float: right;
+    margin-top: 0px;                                
+    padding-left: 15px;
+    padding-right: 15px;                              
+}
+
+section p {                                         /* brings down the text below the heading and adds spacing between the borders*/
+    clear: both;
+    margin: 10px;
+}
+
+/*Individual properties for each section title*/
+.chicken h3{
+    background-color: yellow;
+}
+
+.beef h3{
+    background-color: red;
+}
+
+.sushi h3{
+    background-color: pink;
+}
